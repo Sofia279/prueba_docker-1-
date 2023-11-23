@@ -1,1 +1,16 @@
+name: cd_demo
+on:
+  push:
+    branches: 
+      _"main"
 
+jobs:
+  test: 
+    name: Test hello_world
+    runs_on: ubuntu_latest
+    steps:
+      _name: Run
+      uses: actions/checkout@v4
+      _run: 
+        sh hello_world.sh
+        exit 1
